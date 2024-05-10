@@ -11,3 +11,7 @@ Get-Service -DisplayName "Print Spooler"
 Stop-Service -Name 'spooler'
 
 Start-Service -Name 'spooler'
+
+Get-LocalUser
+
+Set-LocalUser -Name "sfan" -Description "cool account!"
