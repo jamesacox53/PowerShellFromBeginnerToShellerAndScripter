@@ -39,3 +39,14 @@ Get-Command
 Get-Command -Name 'Get-Service'
 
 Get-Command -Name 'Get-Service' | Format-Table -AutoSize
+
+--------
+M1 : How does the pipeline work?
+
+Get-Service -Name 'spooler' | Stop-Service
+
+Get-Service -Name 'spooler' | Start-Service
+
+Get-LocalUser -Name 'sfan' | SetLocalUser -Description 'cooler user'
+
+Get-LocalUser | SetLocalUser -Description 'oops I changed it'
