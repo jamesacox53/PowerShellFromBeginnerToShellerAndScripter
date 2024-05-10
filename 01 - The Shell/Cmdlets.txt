@@ -73,3 +73,14 @@ M1 : Outputting to a text file
 Get-Service | Out-File -FilePath '.\services.txt'
 
 Get-LocalUser | Out-File -FilePath '.\localUsers.txt'
+
+--------
+M1 : Formatting data in PowerShell
+
+Get-LocalUser | Format-List
+
+Get-LocalUser | Format-List | Out-File -FilePath ".\usersList.txt"
+
+Get-Service | Format-Table -Autosize
+
+Get-Service | Format-Table -Autosize | Out-File -FilePath ".\services.txt"
