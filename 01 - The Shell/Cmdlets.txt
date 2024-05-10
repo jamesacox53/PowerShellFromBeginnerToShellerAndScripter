@@ -25,3 +25,8 @@ Set-LocalUser -Name "sfan" -Description "cool account!"
 M1 : Getting the help for PowerShell you need
 
 Get-Help -Name "Get-Service"
+
+--------
+M1 : Which Cmdlet does the job for you?
+
+Disable-LocalUser -Name "sfan"
