@@ -1,0 +1,13 @@
+Get-Service
+
+Stop-Service
+
+Start-Service
+
+Get-Service -Name "spooler"
+
+Get-Service -DisplayName "Print Spooler"
+
+Stop-Service -Name 'spooler'
+
+Start-Service -Name 'spooler'
