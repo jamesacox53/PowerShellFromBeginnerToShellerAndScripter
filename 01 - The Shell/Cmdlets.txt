@@ -50,3 +50,12 @@ Get-Service -Name 'spooler' | Start-Service
 Get-LocalUser -Name 'sfan' | SetLocalUser -Description 'cooler user'
 
 Get-LocalUser | SetLocalUser -Description 'oops I changed it'
+
+--------
+M1 : How does the pipeline work? Part 2
+
+Get-Item -Path 'ItemPath'
+
+Copy-Item -Path "ItemPath" -Destination "DestinationPath"
+
+Get-Item -Path 'ItemPath' | Copy-Item -Destination "DestinationPath"
