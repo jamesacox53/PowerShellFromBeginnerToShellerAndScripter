@@ -59,3 +59,10 @@ Get-Item -Path 'ItemPath'
 Copy-Item -Path "ItemPath" -Destination "DestinationPath"
 
 Get-Item -Path 'ItemPath' | Copy-Item -Destination "DestinationPath"
+
+--------
+M1 : How does the pipeline work? Part 3
+
+Get-ChildItem -Path "DirectoryPath"
+
+Get-ChildItem -Path "DirectoryPath" | Copy-Item -Destination "DestinationDirectoryPath"
