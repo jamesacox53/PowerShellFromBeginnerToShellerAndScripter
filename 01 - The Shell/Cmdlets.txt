@@ -30,3 +30,12 @@ Get-Help -Name "Get-Service"
 M1 : Which Cmdlet does the job for you?
 
 Disable-LocalUser -Name "sfan"
+
+--------
+M1 : What are modules?
+
+Get-Command
+
+Get-Command -Name 'Get-Service'
+
+Get-Command -Name 'Get-Service' | Format-Table -AutoSize
