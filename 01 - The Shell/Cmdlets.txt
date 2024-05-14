@@ -84,3 +84,10 @@ Get-LocalUser | Format-List | Out-File -FilePath ".\usersList.txt"
 Get-Service | Format-Table -Autosize
 
 Get-Service | Format-Table -Autosize | Out-File -FilePath ".\services.txt"
+
+--------
+M1 : Getting to properties and methods
+
+Get-Service | Get-Member
+
+Get-LocalUser | Get-Member
