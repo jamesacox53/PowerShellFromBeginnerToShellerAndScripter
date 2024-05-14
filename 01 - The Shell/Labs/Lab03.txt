@@ -1,0 +1,9 @@
+1.
+Get-LocalUser | Where-Object {$PSItem.Enabled -eq $True} | Set-LocalUser -Description 'Enabled account'
+
+2.
+Get-LocalUser | Where-Object {$PSItem.Description -eq 'Enabled account'}
+
+3.
+Get-LocalUser | Where-Object {$PSItem.Description -eq 'Enabled account'} | Out-File -FilePath '.\enabledUsers.txt'
+
