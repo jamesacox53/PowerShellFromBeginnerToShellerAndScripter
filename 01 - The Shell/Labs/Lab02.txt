@@ -1,0 +1,24 @@
+1.
+Get-Service | Where-Object {PSItem.Status -eq 'Running'}
+
+2.
+Get-Service | Where-Object {PSItem.Name -eq 'Spooler'}
+
+3.
+Get-Service | Get-Member
+
+4.
+New-LocalUser -Name "Bobby" -NoPassword
+New-LocalUser -Name "Sandra" -NoPassword
+
+5.
+Get-LocalUser | Where-Object {$PSItem.Enabled -eq $True}
+
+6.
+Get-LocalUser | Where-Object {$PSItem.Enabled -eq $True} | Out-File -FilePath '.\users.txt'
+
+7.
+Get-LocalUser | Where-Object {$PSItem.Enabled -eq $True} | Export-Csv -Path '.\users.csv' -NoTypeInformation
+
+8.
+Get-LocalUser | Where-Object {$PSItem.Enabled -eq $True} | Select-Object -Property 'Name','Enabled','Description' | Export-Csv -Path '.\users.csv' -NoTypeInformation
