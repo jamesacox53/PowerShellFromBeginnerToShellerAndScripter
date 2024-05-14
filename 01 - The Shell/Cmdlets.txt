@@ -91,3 +91,12 @@ M1 : Getting to properties and methods
 Get-Service | Get-Member
 
 Get-LocalUser | Get-Member
+
+--------
+M1 : Using Where-Object to filter properties Part 1
+
+Get-Service | Where-Object {$PSItem.Status -eq 'running'}
+
+Get-Service | Where-Object {$PSItem.Name -eq 'spooler'}
+
+Get-Service | Where-Object {$PSItem.DisplayName -eq 'print spooler'}
