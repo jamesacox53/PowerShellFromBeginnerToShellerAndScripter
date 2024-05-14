@@ -131,3 +131,9 @@ Get-LocalUser | Select-Object -Property 'Name','Enabled' | Format-List
 
 Get-LocalUser | Select-Object -Property 'Name','Enabled' | Out-File -FilePath '.\selectedUsers.txt'
 
+--------
+M1 : Sorting stuff with Sort-Object
+
+Get-LocalUser | Sort-Object -Property 'Name' -Descending
+
+Get-Service | Sort-Object -Property 'Name' -Descending
