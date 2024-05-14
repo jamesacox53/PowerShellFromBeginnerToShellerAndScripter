@@ -100,3 +100,14 @@ Get-Service | Where-Object {$PSItem.Status -eq 'running'}
 Get-Service | Where-Object {$PSItem.Name -eq 'spooler'}
 
 Get-Service | Where-Object {$PSItem.DisplayName -eq 'print spooler'}
+
+--------
+M1 : Using Where-Object to filter properties Part 2
+
+Get-LocalUser | Where-Object {$PSItem.Enabled -eq $True}
+
+Get-LocalUser | Where-Object {$PSItem.Description -eq 'tests'}
+
+Get-LocalUser | Where-Object {$PSItem.Description -eq 'tests'} | Out-File -FilePath '.\stopped.txt'
+
+Get-LocalUser | Where-Object {$PSItem.Enabled -eq $false} | Set-LocalUser -Description 'disabled account'
