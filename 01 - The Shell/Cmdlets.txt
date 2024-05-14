@@ -111,3 +111,23 @@ Get-LocalUser | Where-Object {$PSItem.Description -eq 'tests'}
 Get-LocalUser | Where-Object {$PSItem.Description -eq 'tests'} | Out-File -FilePath '.\stopped.txt'
 
 Get-LocalUser | Where-Object {$PSItem.Enabled -eq $false} | Set-LocalUser -Description 'disabled account'
+
+--------
+M1 : Select-Object for outputting specific information
+
+Get-Service | Select-Object -First 5
+
+Get-Service | Select-Object -Last 5
+
+Get-Service | Select-Object -Property 'Name'
+
+Get-Service | Select-Object -Property 'Name','Status'
+
+Get-Service | Select-Object -Property 'Name','Status' | Format-List
+
+Get-LocalUser | Select-Object -Property 'Name','Enabled'
+
+Get-LocalUser | Select-Object -Property 'Name','Enabled' | Format-List
+
+Get-LocalUser | Select-Object -Property 'Name','Enabled' | Out-File -FilePath '.\selectedUsers.txt'
+
