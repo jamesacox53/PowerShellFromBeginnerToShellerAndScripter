@@ -1,0 +1,15 @@
+1.
+Get-Service -Name "spooler" | Start-Service
+Get-Service -Name "spooler" | Stop-Service
+
+2.
+Get-Disk
+
+3.
+Get-Volume
+
+4.
+Get-Volume -DriveLetter 'C'
+
+5.
+New-LocalUser -Name 'New User' -Description 'A newly created user.' -NoPassword
