@@ -1,0 +1,1 @@
+﻿Get-ADUser -Identity 'SAM Account Name'
